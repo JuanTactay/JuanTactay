@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuno and Yumi's Chronicles</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', Arial, sans-serif;
+            background-color: #ffe6e6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #ff6666;
+            padding: 20px;
+            border-bottom: 5px solid #cc3333;
+        }
+        h1 {
+            color: #b30000;
+            font-size: 2.8em;
+            text-shadow: 2px 2px #ffcccc;
+            margin: 0;
+        }
+        /* Navigation Bar Styles */
+        nav {
+            background-color: #cc3333;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: center; /* Aligns nav items vertically */
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            line-height: 1.5; /* Ensures consistent height */
+        }
+        nav a:hover {
+            background-color: #ff9999;
+            color: #b30000;
+        }
+        /* Dropdown for Video */
+        .dropdown {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%; /* Positions below the Video link */
+            left: 50%;
+            transform: translateX(-50%); /* Centers horizontally */
+            background-color: #fff;
+            min-width: 400px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 8px;
+            padding: 10px;
+            text-align: center;
+            transition: opacity 0.2s ease; /* Smooth appearance */
+            opacity: 0;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+            opacity: 1;
+        }
+        /* Add delay to prevent premature video trigger */
+        .dropdown:hover .dropdown-content {
+            transition-delay: 0.1s; /* Slight delay for hover */
+        }
+        section {
+            margin: 20px auto;
+            max-width: 900px;
+            padding: 20px;
+            background-color: #fff;
+            border: 3px dashed #ff9999;
+            border-radius: 15px;
+        }
+        img {
+            max-width: 400px;
+            height: auto;
+            border: 4px solid #ff6666;
+            border-radius: 12px;
+            margin: 15px 0;
+            transition: transform 0.3s ease;
+        }
+        /* Yumi's 2D Transform on Hover */
+        #yumi-img:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+        /* Yuno's 3D Transform on Hover */
+        #yuno-img:hover {
+            transform: perspective(500px) rotateY(15deg);
+        }
+        /* General Hover Zoom for Other Images */
+        img:not(#yumi-img):not(#yuno-img):hover {
+            transform: scale(1.1);
+        }
+        .cat-bio {
+            font-style: italic;
+            color: #555;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .photo-gallery {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            gap: 10px;
+            overflow-x: auto;
+        }
+        .photo-gallery img {
+            max-width: 200px;
+            height: auto;
+        }
+        audio {
+            margin: 15px 0;
+            max-width: 300px;
+        }
+        video {
+            max-width: 400px;
+            height: auto;
+            border: 4px solid #ff6666;
+            border-radius: 12px;
+            margin: 10px 0;
+        }
+        footer {
+            background-color: #ff6666;
+            padding: 15px;
+            margin-top: 30px;
+        }
+        a {
+            color: #b30000;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: #ff9999;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li::before {
+            content: "🐾 ";
+        }
+        /* Responsive Navigation Bar */
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav a {
+                padding: 8px 15px;
+                margin: 2px;
+            }
+            .dropdown-content {
+                min-width: 100%;
+                left: 0;
+                transform: none; /* Remove centering for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Yuno & Yumi's Chronicles</h1>
+        <p>Welcome to the world of my two cats: Yuno and Yumi! 😸</p>
+    </header>
+    <nav>
+        <a href="#yumi">Yumi</a>
+        <a href="#yuno">Yuno</a>
+        <a href="#gallery">Gallery</a>
+        <div class="dropdown">
+            <a href="#video">Video</a>
+            <div class="dropdown-content">
+                
+                <video controls>
+                    <source src="file:///C:/Users/2023-1-00660/Downloads/MicrosoftTeams-video.mp4" type="video/mp4">
+                    Your browser does not support the video element.
+                </video>
+            </div>
+        </div>
+    </nav>
+    <section id="yumi">
+        <h2>Yumi: The Chonker</h2>
+        <p>Meet Yumi, the lovable chubby cat with a big appetite and an even bigger personality. Yumi’s favorite hobby is eating (especially if there’s fish around), and when he’s not enjoying a snack, he’s usually picking playful fights with other cats—though he somehow always ends up on the losing side. 😿</p>
+        <div class="cat-bio">
+            <p>"I fight for honor... and snacks. Mostly snacks. *yawn* 🥐"</p>
+        </div>
+        <img id="yumi-img" src="file:///C:/Users/2023-1-00660/Downloads/shared%20image.jpg" alt="Yumi the fat cat lounging or eating">
+        <p>Check out this <a href="https://www.petmd.com/cat/behavior/why-cats-fight" target="_blank">guide on why cats throw paws</a>!</p>
+    </section>
+    <section id="yuno">
+        <h2>Yuno: The Hypersonic Parkour Pro</h2>
+        <p>Say hello to Yuno, the king of zoomies Yuno has an endless curiosity, sniffing everything in sight, and when he’s not investigating, you’ll catch him leaping around like a tiny acrobat. Just like his big brother Yumi, Yuno is a huge fan of fish (maybe even more obsessed). 🐟</p>
+        <div class="cat-bio">
+            <p>"Gotta go fast! Also, is that fish I smell? Gimme. 🐱‍🚀"</p>
+        </div>
+        <img id="yuno-img" src="file:///C:/Users/2023-1-00660/Downloads/shared%20image%20(1).jpg" alt="Yuno the cat mid-zoom or eyeing food">
+        <p>Visit this <a href="https://www.catster.com/cat-health-care/how-to-calm-your-hyper-cat/" target="_blank">hyper cat guide</a> for tips!</p>
+    </section>
+    <section>
+        <h2>awwww</h2>
+        <ul>
+        </ul>
+        <img src="file:///C:/Users/2023-1-00660/Downloads/shared%20image%20(2).jpg" alt="Yuno and Yumi causing chaos together">
+    </section>
+    <section id="gallery">
+        <h2>More Photos of Yuno and Yumi!</h2>
+        <p>😹</p>
+        <div class="photo-gallery">
+            <img src="file:///C:/Users/2023-1-00660/Downloads/shared%20image%20(3).jpg" alt="Yumi upside down">
+            <img src="file:///C:/Users/2023-1-00660/Downloads/shared%20image%20(4).jpg" alt="Yuno in action">
+            <img src="file:///C:/Users/2023-1-00660/Downloads/shared%20image%20(6).jpg" alt="Yuno taking the long way">
+            <img src="file:///C:/Users/2023-1-00660/Downloads/shared%20image%20(7).jpg" alt="Yumi sunkissed">
+        </div>
+        
+        <p>Check out this <a href="https://www.reddit.com/r/cats/" target="_blank">Reddit cat community</a> for endless feline shenanigans!</p>
+    </section>
+    <footer>
+        <p>&copy; 2025 Yuno & Yumi’s Chaos Crew. <a href="#top">Zoom back to top</a></p>
+    </footer>
+</body>
+</html>
