@@ -24,7 +24,6 @@
             text-shadow: 2px 2px #ffcccc;
             margin: 0;
         }
-        /* Navigation Bar Styles */
         nav {
             background-color: #cc3333;
             padding: 10px;
@@ -47,7 +46,6 @@
             background-color: #ff9999;
             color: #b30000;
         }
-        /* Dropdown for Video */
         .dropdown {
             position: relative;
             display: inline-flex;
@@ -273,13 +271,13 @@
             <a href="#video">Video</a>
             <div class="dropdown-content">
                 <video controls>
-                    <source src="file:///C:/Users/VinceKarlo/Documents/WEBSYSTEMS_C334/Cat%20Website/MicrosoftTeams-video.mp4" type="video/mp4">
+                    <source src="microsoft-teams-video.mp4" type="video/mp4">
                     Your browser does not support the video element.
                 </video>
             </div>
         </div>
         <a href="#register">Register</a>
-        <a href="fun.html">Fun Zone</a>  
+        <a href="fun.html">Fun Zone</a>
     </nav>
 
     <section id="yumi">
@@ -288,7 +286,7 @@
         <div class="cat-bio">
             <p>"I fight for honor... and snacks. Mostly snacks. *yawn* 🥐"</p>
         </div>
-        <img id="yumi-img" src="file:///C:/Users/VinceKarlo/Documents/WEBSYSTEMS_C334/Cat%20Website/shared%20image.jpg" alt="Yumi the fat cat lounging or eating">
+        <img id="yumi-img" src="shared-image.jpg" alt="Yumi the fat cat lounging or eating">
         <p>Check out this <a href="https://www.petmd.com/cat/behavior/why-cats-fight" target="_blank">guide on why cats throw paws</a>!</p>
     </section>
 
@@ -298,24 +296,24 @@
         <div class="cat-bio">
             <p>"Gotta go fast! Also, is that fish I smell? Gimme. 🐱‍🚀"</p>
         </div>
-        <img id="yuno-img" src="file:///C:/Users/VinceKarlo/Documents/WEBSYSTEMS_C334/Cat%20Website/shared%20image%20(1).jpg" alt="Yuno the cat mid-zoom or eyeing food">
+        <img id="yuno-img" src="shared-image-1.jpg" alt="Yuno the cat mid-zoom or eyeing food">
         <p>Visit this <a href="https://www.catster.com/cat-health-care/how-to-calm-your-hyper-cat/" target="_blank">hyper cat guide</a> for tips!</p>
     </section>
 
     <section>
         <h2>awwww</h2>
         <ul></ul>
-        <img src="file:///C:/Users/VinceKarlo/Documents/WEBSYSTEMS_C334/Cat%20Website/shared%20image%20(2).jpg" alt="Yuno and Yumi causing chaos together">
+        <img src="shared-image-2.jpg" alt="Yuno and Yumi causing chaos together">
     </section>
 
     <section id="gallery">
         <h2>More Photos of Yuno and Yumi!</h2>
         <p>😹</p>
         <div class="photo-gallery">
-            <img src="file:///C:/Users/VinceKarlo/Documents/WEBSYSTEMS_C334/Cat%20Website/shared%20image%20(3).jpg" alt="Yumi upside down">
-            <img src="file:///C:/Users/VinceKarlo/Documents/WEBSYSTEMS_C334/Cat%20Website/shared%20image%20(4).jpg" alt="Yuno in action">
-            <img src="file:///C:/Users/VinceKarlo/Documents/WEBSYSTEMS_C334/Cat%20Website/shared%20image%20(6).jpg" alt="Yuno taking the long way">
-            <img src="file:///C:/Users/VinceKarlo/Documents/WEBSYSTEMS_C334/Cat%20Website/shared%20image%20(7).jpg" alt="Yumi sunkissed">
+            <img src="shared-image-3.jpg" alt="Yumi upside down">
+            <img src="shared-image-4.jpg" alt="Yuno in action">
+            <img src="shared-image-6.jpg" alt="Yuno taking the long way">
+            <img src="shared-image-7.jpg" alt="Yumi sunkissed">
         </div>
         <p>Check out this <a href="https://www.reddit.com/r/cats/" target="_blank">Reddit cat community</a> for endless feline shenanigans!</p>
     </section>
@@ -385,7 +383,7 @@
     </footer>
 
     <script>
-        
+        // Registration form functionality
         document.getElementById('registrationForm').addEventListener('submit', function(e) {
             e.preventDefault();
             const username = document.getElementById('username').value.trim();
@@ -440,7 +438,7 @@
             }
         });
         
-        
+        // Smooth scrolling for navigation links
         document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
